@@ -1,5 +1,9 @@
 cmake_minimum_required(VERSION 2.8.11)
 project(sweep C CXX)
+find_package(catkin REQUIRED)
+catkin_package(
+   INCLUDE_DIRS include
+   LIBRARIES sweep )
 
 
 # Major for breaking ABI changes. Minor for features. Patch for bugfixes.
@@ -97,3 +101,10 @@ configure_file("${CMAKE_CURRENT_SOURCE_DIR}/cmake/CMakeUninstall.cmake.in"
                IMMEDIATE @ONLY)
 
 add_custom_target(uninstall COMMAND ${CMAKE_COMMAND} -P ${CMAKE_CURRENT_BINARY_DIR}/cmake/CMakeUninstall.cmake)
+
+# Catkin install targets
+install(TARGETS ${PROJECT_NAME}
+  ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
+  LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
+  RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+)

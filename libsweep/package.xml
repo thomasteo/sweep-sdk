@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<package>
+  <name>sweep</name>
+  <version>1.2.3</version>
+  <description>Catkinised package of libsweep for use with sweep-ros</description>
+  <author>Scanse/Authors</author>
+  <maintainer email="t.teo@acfr.usyd.edu.au">Thomas Teo</maintainer>
+  <license>MIT</license>
+  <buildtool_depend>catkin</buildtool_depend>
+  <!-- The export tag contains other, unspecified, tags -->
+  <export>
+    <!-- You can specify that this package is a metapackage here: -->
+  </export>
+</package>
